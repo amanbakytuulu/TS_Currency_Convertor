@@ -1,0 +1,101 @@
+.chooseCurrencyRight {
+    & .chooseCurrencyRight__header {
+        display: flex;
+        flex-direction: column;
+        font-size: 2rem;
+        font-weight: 300;
+        background: #354141;
+
+        & .chooseCurrencyRight__currency {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #f7ad44;
+            padding: 10px 0;
+        }
+
+        & .chooseCurrencyRight__input {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px 0px 10px;
+            position: relative;
+            border: 1px solid #323e3e;
+
+            & input {
+                flex: 1;
+                margin: 0 7px;
+                border-radius: 7px;
+                border: none;
+                padding: 12px 35px 12px 30px;
+                outline: none;
+                background-color: #162626;
+                color: var(--first-color);
+            }
+
+            & .chooseCurrencyRight__icon {
+                position: absolute;
+                color: #86858a;
+                font-size: 2rem;
+
+                &.left {
+                    left: 13px;
+                }
+                &.right {
+                    right: 85px;
+                    opacity: 0;
+                    cursor: pointer;
+
+                    &.show {
+                        opacity: 1;
+                    }
+                }
+            }
+
+            & a {
+                color: #f7ad44;
+                margin: 0 7px;
+            }
+        }
+    }
+
+    & .chooseCurrencyRight__middle {
+        background: #485a5c;
+        height: 56vh;
+        overflow-y: scroll;
+        & h2 {
+            font-size: 2.2rem;
+            font-weight: 300;
+            padding: 8px 40px;
+            border-bottom: 1px solid #57696b;
+            color: #f7ad44;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+
+            &:hover{
+                background-color: #324242;
+            }
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        /* Track */
+        &::-webkit-scrollbar-track {
+            background: #454955;
+        }
+
+        /* Handle */
+        &::-webkit-scrollbar-thumb {
+            background: rgb(107, 106, 106);
+        }
+
+        /* Handle on hover */
+        &::-webkit-scrollbar-thumb:hover {
+            background: rgb(26, 26, 26);
+        }
+    }
+}

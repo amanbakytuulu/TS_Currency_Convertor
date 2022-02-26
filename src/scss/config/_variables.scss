@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@300;400&display=swap");
+
+
+:root{
+    --body-font:  "Hind Madurai", sans-serif;
+
+    --first-color:#f0f5f8;
+    --second-color:#f7efd8;
+
+    --text-color:#8cb1b1;
+
+    --bg-color-dark:#1e1d22;
+    --bg-color-gray:#6f7f7f;
+    --bg-color-black:#292c35;
+    --bg-color-light-gray:#7b8d8f;
+
+    --bg-color-setting:#3a3a3a;
+    --bg-color-setting-text:#464646;
+
+    --color-icon:rgb(103, 102, 108);
+    --color-icon-hover:rgb(127, 126, 131);
+
+
+    --font-size:3rem;
+
+    @media screen and (max-width:1024px){
+        --font-size:4rem;
+    }
+    @media screen and (max-width:540px){
+        --font-size:3rem;
+    }
+
+    @media screen and (max-width:475px){
+        --font-size:6.5rem;
+    }
+  
+
+    @media screen and (max-width:360px){
+        --font-size:5rem;
+    }
+}

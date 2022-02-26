@@ -1,0 +1,115 @@
+.currency {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+
+    & .currency__top {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        position: sticky;
+        top: 0;
+
+        & .currency__code {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 225px;
+            width: 100%;
+
+            &.bg-dark {
+                background: var(--bg-color-dark);
+                position: relative;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    right: -3px;
+                    top: -5px;
+                    width: 65px;
+                    height: 65px;
+                    clip-path: polygon(0 0, 0 55%, 55% 0);
+                    background: var(--bg-color-dark);
+                    transform: rotate(135deg);
+                }
+            }
+
+            &.bg-gray {
+                background: var(--bg-color-gray);
+
+                & .currency__setting {
+                    color: rgb(142, 175, 175);
+                    &:hover {
+                        color: rgb(152, 201, 201);
+                    }
+                }
+            }
+
+            & a h2 {
+                font-size: var(--font-size);
+                letter-spacing: 0.1rem;
+                font-weight: 300;
+                padding: 10px 35px;
+            }
+
+            &:first-child > a h2 {
+                color: #c64647;
+            }
+
+            &:last-child > a h2 {
+                color: #f2a648;
+            }
+
+            & .currency__setting {
+                font-size: var(--font-size);
+                margin: 0px 15px;
+                color: var(--color-icon);
+
+                &:hover {
+                    color: var(--color-icon-hover);
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    & .currency__middle {
+        display: flex;
+        height: 60vh;
+        overflow-y: hidden;
+
+        & .currency__amount {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+            & p {
+                font-size: var(--font-size);
+                padding: 8px 35px;
+                font-weight: 300;
+                letter-spacing: 0.1rem;
+            }
+
+            &.bg-black {
+                background: var(--bg-color-black);
+                & p {
+                    color: var(--first-color);
+                    border-bottom: 1px solid #3d4049;
+                    text-align: end;
+                }
+            }
+
+            &.bg-lightGray {
+                background: var(--bg-color-light-gray);
+
+                & p {
+                    color: var(--second-color);
+                    border-bottom: 1px solid #86989a;
+                    text-align: start;
+                }
+            }
+        }
+    }
+}

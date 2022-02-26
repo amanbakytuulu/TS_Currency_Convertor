@@ -1,0 +1,70 @@
+@media screen and (max-width: 475px) {
+    .app {
+        margin: 0;
+        & .app__header {
+            display: none;
+        }
+
+        &::before {
+            display: none;
+        }
+    }
+
+    .currency__code {
+        min-width: 100%;
+
+        &.bg-dark {
+            &::before {
+                right: -10px !important;
+                top: 8px !important;
+                width: 100px !important;
+                height: 100px !important;
+            }
+        }
+
+        & a h2 {
+            padding: 15px 66px !important;
+        }
+    }
+
+    .currency__middle {
+        height: 100% !important;
+        overflow-y: visible !important;
+    }
+
+    .currency__amount {
+        min-width: 100%;
+        height: 200vh;
+
+        & p {
+            padding: 15px 66px !important;
+        }
+    }
+
+    .setting {
+        & .setting__header {
+            & .setting__title {
+                font-size: 2rem !important;
+            }
+
+            & a {
+                font-size: 1.7rem;
+            }
+        }
+        & .setting__params {
+            height: 100vh;
+            & .setting__param h3 {
+                font-size: 1.7rem;
+                color: var(--text-color);
+                font-weight: 200;
+            }
+            & .time{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .chooseCurrencyLeft__middle, .chooseCurrencyRight__middle {
+        height: 100vh !important;
+    }
+}
