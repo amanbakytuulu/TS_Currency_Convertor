@@ -12,22 +12,25 @@ function Currency(props) {
     // const [show, setShow] = useState(false);
     const [arr, setArr] = useState([1.00, 2.00, 3.00, 4.00, 5.00, 6.00, 7.00, 8.00, 9.00, 10.00]);
 
+    // function for change currencies
     const currencyChange = () => {
         setCurrency1(currency2);
         setCurrency2(currency1);
     }
 
+    // find current currency
     const currentCurrency = amount.find((cur) => (
         cur[0] == currency2
     ))
 
+    // clicking on the left side of the screen will reduce the currency
     const divisionCurrency = () => {
         if (arr[0] <= 1) {
             return 0;
         }
         setArr(arr.map((num) => num / 10));
     }
-
+    // clicking on the left side of the screen will improve the currency
     const multiplicationCurrency = () => {
         if (arr[0] >= 1000000000) {
             return 0;
