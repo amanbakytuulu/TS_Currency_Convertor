@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { MdArrowForwardIos } from 'react-icons/md';
 
 function Setting(props) {
-    const {time}=props;
+    const {time,setChecked,checked}=props;
 
     return (
         <div className="setting">
@@ -15,7 +15,7 @@ function Setting(props) {
             <div className="setting__params">
                 <div className="setting__param mr-30">
                     <h3>Prefer Rounded Values</h3>
-                    <input className="switch" id="switch1" type="checkbox" />
+                    <input className="switch" id="switch1" type="checkbox" checked={checked} onChange={()=>setChecked(!checked)} />
                     <label className="switch-for" htmlFor="switch1"></label>
                 </div>
                 <div className="setting__param ">

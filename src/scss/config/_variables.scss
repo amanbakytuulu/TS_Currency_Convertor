@@ -26,6 +26,11 @@
     @media screen and (max-width:1024px){
         --font-size:4rem;
     }
+
+    @media screen and (max-width:768px){
+        --font-size:3.2rem;
+    }
+
     @media screen and (max-width:540px){
         --font-size:3rem;
     }
@@ -35,7 +40,10 @@
     }
   
 
-    @media screen and (max-width:360px){
+    @media screen and (max-width:375px){
+        --font-size:5.5rem;
+    }
+    @media screen and (max-width:320px){
         --font-size:5rem;
     }
 }

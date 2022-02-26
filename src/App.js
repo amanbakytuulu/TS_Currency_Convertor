@@ -10,21 +10,20 @@ import ChooseCurrencyRight from './pages/ChooseCurrency/ChooseCurrencyRight/Choo
 function App() {
 
   const [rates, setRates] = useState([]);
-  const [currency1, setCurrency1] = useState('USD');
-  const [currency2, setCurrency2] = useState('KGS');
+  const [currency1, setCurrency1] = useState(localStorage.getItem('currency1') || 'USD');
+  const [currency2, setCurrency2] = useState(localStorage.getItem('currency2') || 'KGS');
   const [time, setTime] = useState(null);
+  const [checked, setChecked] = useState(false);
 
   useEffect(() => {
-    currencyAPI.get('/',{
-      params:{
-        base_currency:currency1
+    currencyAPI.get('/', {
+      params: {
+        base_currency: currency1
       }
     })
       .then(resp => {
         setRates(resp.data.data);
         setTime(resp.data.query.timestamp);
-
-        console.log(typeof resp.data.query.base_currency);
       })
 
   }, [currency1])
@@ -42,10 +41,11 @@ function App() {
             currency2={currency2}
             setCurrency1={setCurrency1}
             setCurrency2={setCurrency2}
-            amount={Object.values(rates)}
+            amount={Object.entries(rates)}
+            checked={checked}
           />}
         />
-        <Route path='setting' element={<Setting time={time}/>} />
+        <Route path='setting' element={<Setting time={time} setChecked={setChecked} checked={checked} />} />
         <Route path='chooseCurrencyLeft' element={
           <ChooseCurrencyLeft
             currencies={Object.keys(rates)}

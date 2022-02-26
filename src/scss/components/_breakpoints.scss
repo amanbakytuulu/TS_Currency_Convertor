@@ -26,17 +26,30 @@
             padding: 15px 66px !important;
         }
     }
+    .currency {
+        & .currency__middle {
+            height: 100% !important;
+            overflow: visible !important;
 
-    .currency__middle {
-        height: 100% !important;
-        overflow-y: visible !important;
+            & .slide {
+                // font-size: 10rem !important;
+
+                &.left {
+                    left: -15px;
+                }
+
+                &.right {
+                    right: -100%;
+                }
+            }
+        }
     }
 
     .currency__amount {
         min-width: 100%;
         height: 200vh;
 
-        & p {
+        & ul > li {
             padding: 15px 66px !important;
         }
     }
@@ -58,13 +71,14 @@
                 color: var(--text-color);
                 font-weight: 200;
             }
-            & .time{
+            & .time {
                 font-size: 2rem;
             }
         }
     }
 
-    .chooseCurrencyLeft__middle, .chooseCurrencyRight__middle {
+    .chooseCurrencyLeft__middle,
+    .chooseCurrencyRight__middle {
         height: 100vh !important;
     }
 }

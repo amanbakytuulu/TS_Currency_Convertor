@@ -7,7 +7,7 @@ import { SiOpenaccess } from 'react-icons/si';
 
 function ChooseCurrencyRight(props) {
 
-    const { currencies,setCurrency2 } = props;
+    const { currencies, setCurrency2 } = props;
 
     let navigate = useNavigate();
 
@@ -24,6 +24,7 @@ function ChooseCurrencyRight(props) {
 
     function onChangeCurrency(currency) {
         setCurrency2(currency);
+        localStorage.setItem('currency2', currency);
         navigate('/');
     }
 
@@ -40,7 +41,7 @@ function ChooseCurrencyRight(props) {
             </div>
             <div className="chooseCurrencyRight__middle">
                 {filtered.sort().map((currency, index) => {
-                    return <h2 key={index} onClick={()=>onChangeCurrency(currency)}>{currency} <SiOpenaccess style={{ color: '#f0f5f8' }} /> </h2>
+                    return <h2 key={index} onClick={() => onChangeCurrency(currency)}>{currency} <SiOpenaccess style={{ color: '#f0f5f8' }} /> </h2>
                 })}
             </div>
         </div>

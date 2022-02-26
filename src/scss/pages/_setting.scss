@@ -35,7 +35,7 @@
         flex-direction: column;
         background-color: #424242;
         height: 60vh;
-        
+
         & .setting__param {
             display: -webkit-box;
             display: -ms-flexbox;
@@ -95,24 +95,29 @@
                     top: -11px;
                     z-index: 1;
                     transition: all 0.17s linear;
+                    -webkit-transition: all 0.17s linear;
+                    -o-transition: all 0.17s linear;
+                    -moz-transition: all 0.17s linear;
                 }
             }
             & .switch:checked + .switch-for::after {
                 border: 1.5px solid rgb(107, 111, 129);
                 background-color: rgb(107, 111, 129);
                 transition: all 0.2s 0.15s linear;
+                -webkit-transition: all 0.2s 0.15s linear;
+                -o-transition: all 0.2s 0.15s linear;
+                -moz-transition: all 0.2s 0.15s linear;
             }
 
             & .switch:checked + .switch-for::before {
                 left: -22px;
             }
         }
-        & .time{
+        & .time {
             font-size: 2.5rem;
             text-align: center;
             margin-top: 25px;
             color: var(--text-color);
-
         }
     }
 }

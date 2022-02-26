@@ -23,6 +23,7 @@ function ChooseCurrencyLeft(props) {
 
     function onChangeCurrency(currency) {
         setCurrency1(currency);
+        localStorage.setItem('currency1', currency);
         navigate('/');
     }
 

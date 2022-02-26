@@ -76,25 +76,65 @@
     }
 
     & .currency__middle {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        height: 60vh;
-        overflow-y: hidden;
+        overflow: hidden;
+        position: relative;
+        // slide
+        & .slide {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 100%;
+            font-size: 5rem;
+            color: rgba(0, 0, 0, 0.8);
+            opacity: 0;
+            cursor: pointer;
+            transition: all 0.2s linear;
+            -webkit-transition: all .2s linear;
+            -o-transition: all .2s linear;
+            -moz-transition: all .2s linear;
+
+            &.left {
+                left: -5px;
+
+                &:hover {
+                    font-size: 6rem;
+                    transform: translateY(-5px);
+                }
+            }
+
+            &.right {
+                right: -5px;
+
+                &:hover {
+                    font-size: 6rem;
+                    transform: translateY(-5px);
+                }
+            }
+        }
 
         & .currency__amount {
             width: 100%;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             flex-direction: column;
-            
-            & p {
+
+            &::-webkit-scrollbar {
+                display: none;
+            }
+            & ul {
                 font-size: var(--font-size);
-                padding: 8px 35px;
-                font-weight: 300;
-                letter-spacing: 0.1rem;
             }
 
             &.bg-black {
                 background: var(--bg-color-black);
-                & p {
+                & ul > li {
+                    padding: 8px 35px;
+                    font-weight: 300;
+                    letter-spacing: 0.1rem;
                     color: var(--first-color);
                     border-bottom: 1px solid #3d4049;
                     text-align: end;
@@ -104,7 +144,10 @@
             &.bg-lightGray {
                 background: var(--bg-color-light-gray);
 
-                & p {
+                & ul > li {
+                    padding: 8px 35px;
+                    font-weight: 300;
+                    letter-spacing: 0.1rem;
                     color: var(--second-color);
                     border-bottom: 1px solid #86989a;
                     text-align: start;

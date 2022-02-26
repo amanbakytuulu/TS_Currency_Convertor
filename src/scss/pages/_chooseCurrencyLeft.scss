@@ -1,5 +1,7 @@
 .chooseCurrencyLeft {
     & .chooseCurrencyLeft__header {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
         flex-direction: column;
         font-size: 2rem;
@@ -7,6 +9,8 @@
         background: #251f23;
 
         & .chooseCurrencyLeft__currency {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -15,6 +19,8 @@
         }
 
         & .chooseCurrencyLeft__input {
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -69,12 +75,14 @@
             padding: 8px 40px;
             border-bottom: 1px solid #3f424b;
             color: #bd2736;
+            display: -webkit-box;
+            display: -ms-flexbox;
             display: flex;
             justify-content: space-between;
             align-items: center;
             cursor: pointer;
 
-            &:hover{
+            &:hover {
                 background-color: #0c0a18;
             }
         }
