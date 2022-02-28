@@ -10,26 +10,25 @@
         }
     }
 
-    .currency__code {
-        min-width: 100%;
+    .currency {
+        overflow: hidden !important;
 
-        &.bg-dark {
-            &::before {
-                right: -10px !important;
-                top: 8px !important;
-                width: 100px !important;
-                height: 100px !important;
+        & .currency__top {
+            & .currency__code {
+                width: 100%;
+
+                &.bg-dark {
+                    &::before {
+                        right: -11px !important;
+                        top: -5px !important;
+                        width: 80px !important;
+                        height: 80px !important;
+                    }
+                }
             }
         }
-
-        & a h2 {
-            padding: 15px 66px !important;
-        }
-    }
-    .currency {
         & .currency__middle {
             height: 100% !important;
-            overflow: visible !important;
 
             & .slide {
                 // font-size: 10rem !important;
@@ -39,18 +38,12 @@
                 }
 
                 &.right {
-                    right: -100%;
+                    right: -5%;
                 }
             }
         }
-    }
-
-    .currency__amount {
-        min-width: 100%;
-        height: 200vh;
-
-        & ul > li {
-            padding: 15px 66px !important;
+        & .currency__amount {
+            height: 160vh;
         }
     }
 
@@ -80,5 +73,39 @@
     .chooseCurrencyLeft__middle,
     .chooseCurrencyRight__middle {
         height: 100vh !important;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .currency {
+        & .currency__top {
+            & .currency__code {
+                & a > h2 {
+                    padding: 10px 0px;
+                }
+                &.bg-dark {
+                    &::before {
+                        right: -10px !important;
+                        top: 0px !important;
+                        width: 60px !important;
+                        height: 60px !important;
+                    }
+                    & a > h2 {
+                        padding-right: 30px;
+                    }
+                }
+
+                &.bg-gray {
+                    background: var(--bg-color-gray);
+
+                    & a > h2 {
+                        padding-left: 30px;
+                    }
+                }
+                & .currency__setting {
+                    font-size: 2.5rem;
+                }
+            }
+        }
     }
 }
